@@ -335,8 +335,6 @@ small, footer .nav-item{
 .accordion{
   --bs-accordion-border-color:none !important;
   --bs-accordion-active-bg: var(--primary-color) !important;
-  /* --bs-accordion-body-padding-y: 0 !important;
-  --bs-accordion-body-padding-x: 0 !important; */
   --bs-accordion-btn-padding-y: .8rem !important;
 
 }
