@@ -10,6 +10,7 @@
 --cultured: hsl(0, 0%, 93%);
 --onyx: hsl(0, 0%, 27%);
 --services-color: #eae0a2;
+--light-grey: hsl(0, 0%, 47%);
 
 --white-color : #ffffff;
 --light-bg-color: #f2f2f2;
@@ -70,6 +71,7 @@ button{
 }
 .bi-list::before{
   color: var(--white-color);
+  display: none;
   font-size: 2.5rem;
   font-weight: var(--fww8) !important;
   vertical-align: 0.875em;
@@ -247,7 +249,7 @@ small, footer .nav-item{
 }
 
 @media (max-width:992px) {
-  ul.nav.justify-content-center, .mobile-bottom-navigation{
+  ul.nav.justify-content-center, .bi-list::before{
     display: block ;
   }
   .mobile-bottom-navigation{
@@ -315,3 +317,30 @@ small, footer .nav-item{
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25);
   z-index: 5;
 } */
+
+.accordion-button:not(.collapsed) {
+  color: none !important;
+  background-color: none !important;
+  box-shadow: none !important;
+}
+.accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: none !important;
+}
+.accordion-item:last-of-type>.accordion-collapse{
+  /* background-color: var(--cultured); */
+  padding: 0 2rem;
+}
+.accordion{
+  --bs-accordion-border-color:none !important;
+  --bs-accordion-active-bg: var(--primary-color) !important;
+  /* --bs-accordion-body-padding-y: 0 !important;
+  --bs-accordion-body-padding-x: 0 !important; */
+  --bs-accordion-btn-padding-y: .8rem !important;
+
+}
+.accordion-body .nav-item .nav-link{
+  color: var(--light-grey) !important;
+  font-size: 12px !important;
+}
