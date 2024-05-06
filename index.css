@@ -3,14 +3,24 @@
   /**
 * colors
 */
---primary-color:/* rgb(129,233,242)*/ #4cc9f0;
+/* --primary-color:rgb(129,233,242) #4cc9f0; */
+--primary-color: #48cae4ff;
 --eerie-black: hsl(0, 0%, 13%);
---ocean-green: hsl(152, 51%, 52%);
 --davys-gray: hsl(0, 0%, 33%);
 --cultured: hsl(0, 0%, 93%);
 --onyx: hsl(0, 0%, 27%);
 --services-color: #eae0a2;
 --light-grey: hsl(0, 0%, 47%);
+--non-photo-blue: #90e0efff;
+--honolulu-blue: #0077b6ff;
+--vivid-sky-blue: #48cae4ff;
+--pacific-cyan: #00b4d8ff;
+--marian-blue: #023e8aff;
+--blue-green: #0096c7ff;
+--federal-blue: #03045eff;
+--light-cyan: #caf0f8ff;
+--non-photo-blue-2: #ade8f4ff;
+
 
 --white-color : #ffffff;
 --light-bg-color: #f2f2f2;
@@ -34,11 +44,13 @@ body{
   box-sizing: border-box;
   border: none;
   font-family: "Poppins", sans-serif;
-  transition: all ease;
+  transition: all ease-in-out;
+  /* background-color: #F0F8FF; */
 }
 
 img{
   max-width: 100%;
+  background-color: #F0F8FF;
 }
 a{
   color: var(--dark-color) !important;
@@ -237,6 +249,9 @@ small, footer .nav-item{
 .mobile-only{
   display: none !important;
 }
+.overlay-text{
+  display: none;
+}
   
 .mobile-bottom-navigation {
   background: var(--white-color);
@@ -276,6 +291,24 @@ small, footer .nav-item{
     }
   
 }
+@media (max-width: 767px) {
+  .overlay-text {
+    z-index: 1; 
+    width: 90%; 
+    background-color: rgba(76, 201, 240, 0.7); 
+    padding: 20px;
+    color: white;
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  }
+}
 @media (max-width: 525px){
   .navbar-two .desktop-only{
     display: none !important;
@@ -289,7 +322,7 @@ small, footer .nav-item{
   }
 }
 @media (max-width: 470px){
-  .mega-links:hover .mega-box{
+  .mega-links:hover .mega-box, .desktop-only{
     display: none !important;
   }
 }
@@ -317,7 +350,6 @@ small, footer .nav-item{
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25);
   z-index: 5;
 } */
-
 .accordion-button:not(.collapsed) {
   color: none !important;
   background-color: none !important;
@@ -335,10 +367,24 @@ small, footer .nav-item{
 .accordion{
   --bs-accordion-border-color:none !important;
   --bs-accordion-active-bg: var(--primary-color) !important;
+  --bs-accordion-btn-icon-width: .8rem;
   --bs-accordion-btn-padding-y: .8rem !important;
 
+}
+.btn-close{
+  font-size: .8rem;
 }
 .accordion-body .nav-item .nav-link{
   color: var(--light-grey) !important;
   font-size: 12px !important;
 }
+.offcanvas-header {
+  --bs-offcanvas-padding-y: .8rem !important;
+  --bs-offcanvas-padding-x:.8rem !important;
+  border-bottom:1px solid var(--border-color) ;
+}
+.accordion-item{
+  border-bottom:1px solid var(--border-color) ;
+
+}
+
