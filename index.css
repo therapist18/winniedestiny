@@ -55,6 +55,12 @@ img{
 a{
   color: var(--dark-color) !important;
 }
+.fs14{
+  font-size: clamp(2rem, .5rem+ 10vw, 9rem) !important;
+}
+.fs10{
+  font-size: 10px;
+}
 button{
   border: none;
 }
@@ -273,13 +279,10 @@ table{
   vertical-align: middle !important;
   width: 85% !important;
 }
-tr{
-  /* border-color: var(--primary-color) !important; */
+.form-control-sm{
+  font-size: 13px;
 }
-.total{
-  /* border-top:1px solid red; */
-  /* border-top: 2px solid red; */
-}table .col-12{
+table .col-12{
   width: fit-content !important;
   /* vertical-align: middle !important; */
 }
@@ -317,6 +320,10 @@ footer{
     table{
       width: 100% !important;
     }
+    .row2{
+      margin-right: 2.5rem !important;
+      margin-left: 0 !important;
+    }
   
 }
 @media (max-width: 767px) {
@@ -339,10 +346,11 @@ footer{
   aside{
     display: none;
   }
-  .mobile{
+  .mobile, .example{
     display: block;
   }
 }
+
 @media (max-width: 525px){
   .navbar-two .desktop-only{
     display: none !important;
@@ -359,7 +367,7 @@ footer{
   }
   .action-btns button{
     font-size: 10px;
-  }
+  }  
 }
 @media (max-width: 470px){
   .mega-links:hover .mega-box, .desktop-only{
